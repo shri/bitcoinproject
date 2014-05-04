@@ -1,0 +1,267 @@
+body{
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+
+#main_div {
+	width: 100%;
+	height:100%;
+	padding:0px;
+	margin:0px;
+}
+
+#left_div {
+	position: relative;
+	padding:0px;
+	margin:0px;
+	width:30%;
+	height:100%;
+	float:left;
+}
+
+#content_div {
+	position: relative;
+	padding:0;
+	margin:0;
+	width:70%;
+	height:100%;
+	float: right;
+	text-align: center;
+	overflow:hidden !important;
+}
+
+#buy_sell_snapshot_div {
+	position: relative;
+	padding:0px;
+	margin:0px;
+	height:20%;
+	background-color: #33CCCC;
+	color:white;
+	font-family: 'Trebuchet MS';
+}
+
+#current_market_div{
+	position:relative;
+	float:left;
+	width:50%;
+	padding-left:10%;
+	padding-top:8%;
+}
+
+#current_market_tag{
+	font-size: 12px;
+	color:#F0F0F0;
+}
+
+#current_market_value{
+	position: relative;
+	float: left;
+	font-size: 40px;
+}
+
+#btc_tag{
+	position: relative;
+	margin-top: 25px;
+	color:#F0F0F0;
+}
+
+#buy_sell_buttons{
+	position:relative;
+	float: right;
+	width:29%;
+	padding-top: 7%;
+	padding-right: 7%;
+}
+
+#buy_button{
+	position:relative;
+	width: 100%;
+	height: 25%;
+	background-color: #484848;
+	color:white;
+	border-radius: 1px;
+	border:4px;
+}
+
+#sell_button{
+	position:relative;
+	width: 100%;
+	height: 25%;
+	background-color: #FF3300;
+	color:white;
+	margin-top: 8px;
+	border-radius: 1px;
+	border: 4px;
+}
+
+#article_list_div {
+	position: relative;
+	padding:0px;
+	margin:0px;
+	height:80%;
+	background-color: #404040;
+	overflow-y: scroll;
+}
+
+#articles_list {
+	font-family: 'Trebuchet MS';
+	color: #C0C0C0;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 3%;
+}
+
+#articles_list tr {
+	border-bottom: 1px solid #909090;
+	cursor: pointer;
+}
+
+#articles_list tr:hover {
+	background-color: #787878;
+	color: #E8E8E8;
+
+}
+
+#articles_list td {
+	padding: 5.15% 4%;
+	font-size: 17px;
+}
+
+td.article_sentiment {
+
+	font-size: 12px;
+	text-align: center;
+}
+
+.sentiment_dot{
+	position:relative;
+	height: 10px;
+	width: 10px;
+	margin-top: 1px;
+}
+
+
+.ui-widget-overlay.custom-overlay
+{
+    background-color: #404040;
+    background-image: none;
+    opacity: 0.7;
+    z-index: 0;    
+}
+
+.dialog_style{
+	color:black;
+}
+
+#dialog{
+	display: none;
+}
+
+#chart_div {
+	height: 85%;
+	width: 80%;
+	margin-top:6%;
+	margin-right: 15%;
+	margin-left: 12%;
+	text-align: center;
+	overflow-y: hidden !important;
+	overflow-x:scroll;
+
+}
+
+#axis_labels {
+	margin-right: 1%;
+	padding-top: 7.75%;
+	float: left;
+	font-family: 'Trebuchet MS';
+	color: #909090;
+}
+
+.axis_label {
+	margin-bottom: 408%;
+}
+
+#inner_chart_div {
+	height:93%;
+	width:90%;
+	overflow-y: hidden;
+}
+
+#chart {
+	height:85%;
+	width:200%;
+}
+
+#chart_row td {
+	height: 100%;
+	width: 150px;
+	margin:0px;
+	padding:0px;
+}
+
+.radio_buttons{
+	width: 100%;
+	height: 1%;
+	top:10px;
+}
+
+#radio{
+	position:relative;
+}
+
+.dialog_buttons{
+	background-color: gray;
+	color:white;
+	border-radius: 1px;
+	border:4px;
+	width: 35%;
+	height: 40%;
+}
+
+#article_div{
+	height:80%;
+	width:80%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #484848;
+	text-align: left;
+	padding: 2%;
+}
+
+#article_title{
+	font-family: "Trebuchet MS";
+	font-size: 30px;
+}
+
+#article_body{
+	overflow:scroll;
+	height:90%;
+	width:100%;
+	margin-top: 1%;
+}
+
+#x_button{
+	float:right;
+	position:relative;
+	width: 5%;
+	height: 5%;
+	background-color: #484848;
+	color:white;
+	border-radius: 1px;
+	border:4px;
+}
+
+#chart_radio{
+	float:right;
+	margin-bottom: 3%;
+	margin-right: 6%;
+	height: 3%;
+}
+
+#converted_amount{
+	color:gray;
+}

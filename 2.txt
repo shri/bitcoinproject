@@ -1,0 +1,45 @@
+As April 15th draws nearer, people around the world are looking forward to seeing what the People’s Bank of China’s stance on Bitcoin will be. In preparation for the impending day, Chinese Bitcoin businesses have begun receiving official notices of account closures from their banks. As a result of this, Bitcoin price has dropped over 10% to a low of, currently, $388. Interestingly enough, the PBOC still has not made an official announcement yet, but this hasn’t stopped other banks from taking action. This has caused Bitcoin price to decrease significantly over the past few weeks.
+
+Chinese Bitcoin Businesses Get Bank Notices
+
+Bitcoin Price Drops Over 10%
+Bitcoin Price Drops Over 10%
+One of China’s four largest banks, the Agricultural Bank of China, has begun sending out notices to Bitcoin exchange clients that it is changing policies. BtcTrade, made an announcement today talking about the notice it received. According to a translated version of the announcement, BtcTrade wrote,
+
+“I write this announcement with a heavy heart, BtcTrade just received a phone call from the HangZhou Science and Technology City Branch of the Agricultural Bank of China requiring that I stop using company accounts to clear Bitcoin trades. If we are late in stopping, they will freeze the company’s bank account on April 15th. As such, at BtcTrade we have no choice but to stop RMB recharges starting 4/15 at 0:00; trading is not affected.”
+Even after writing that it has to stop RMB recharges, the company continues on to say that it still believes that BtcTrade has a “bright future,” and even that “Bitcoin’s future will be immeasurable.” RMB recharges are the easiest way for Chinese RMB to transfer into a Bitcoin exchange’s bank account in China.
+
+Bitcoin Exchanges in China Get Notification
+
+In addition to BtcTrade, Huobi, a Bitcoin exchange in China, announced that it has gotten a notification from the Industrial and Commercial Bank of China (ICBC). The announcement said that the Zhongguancun branch of the ICBC had contacted Huobi to stop using their bank account. In fact, the Zhongguancun said that they themselves had gotten a notice from “higher authorities” that said Huobi’s account had to be shut down.
+
+Even though Huobi will no longer be able to use the ICBC as their primary bank account, the digital currency exchange reassured users that all their funds are completely safe. Huobi has also said that withdrawals haven’t been affected by their announcement.
+
+BTC100, a smaller Chinese Bitcoin exchange, has also received a notice from its bank which said that it too needed to close its banking account. However, the digital currency exchange, just like Huobi, assured users that withdrawals haven’t been affected by the announcement.
+
+Last week, a few other Bitcoin exchanges received notification from their banks. OKcoin made this announcement,
+
+“Because our 3rd party payment card dealer (payment processor) just received notification to suspend our payment channel, Starting at 0:00 on April 3rd we will stop prepaid card recharges. Bank transfer recharge cards for yuan withdrawals are not effected. We apologize for any inconvenience.”
+BTC38 announced in a similar tone,
+
+“Hello, it is with deep regret that we must inform you, because of the Central Bank’s policy implementation, the 3rd party payment processor long used by BTC38 will tonight cease their usefulness, at the 24th hour they will stop working with us. As a result of additional requests, we will also simultaneously end the use of bank transfer cards as a recharge method.”
+It is no wonder that with all of these announcements, Bitcoin price dropped over 10% in less than 24 hours.
+
+Is Bitcoin Banned in China?
+
+It is true that Bitcoin exchanges are receiving notifications from their respective banks to shut down their accounts, however, this does not mean that Bitcoin is banned in China. All of this simply means is that Chinese Bitcoin exchanges will need to work with banks outside of China in order to do business properly or at least to find a work around the situation to continue running their exchanges. It does not mean that Bitcoin trading is banned in China. A limitation is being placed on the Bitcoin exchanges in order to restrict Bitcoin, not stop it entirely.
+
+However, even with all that is going on in China, the Chinese Bitcoin community is staying strong. BTC38 finished its announcement on a positive note, even after writing that it has to stop bank transfer cards. It wrote,
+
+“Regardless where the future road takes us, we hope that everyone gives this industry a healthy atmosphere, to encourage the competitiveness of emerging platforms. BTC38′s service will always make you comfortable and BTC38 will continue to focus on healthy development in the virtual currency industry.”
+Similarly, OKCoin’s Vice President He Yi said,
+
+“OK is always here, rumor-spreaders can leave now, we already have plans for April 15th.”
+Bitcoin Price Drop
+
+Recent drop in Bitcoin prices is due to the Chinese Bitcoin exchanges receiving notifications from their respective banks saying that they must close their accounts. However, it is important to note that the PBOC has yet to make an official statement.
+
+As for now, one thing is clear: Bitcoin is not banned in China.
+
+CoinReport will continue to follow this story and provide any further updates as they happen.
+

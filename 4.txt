@@ -1,0 +1,36 @@
+Mt. Gox’s recent troubles are circulating like wildfire.  Its repercussions are being felt throughout the world.  Mt. Gox was the most public and well-known brand that represented Bitcoin’s exchange market.  The company’s shutdown is rumored to be caused by a “hack” or “security breach” that resulted in a loss up to 744,000 BTC or $409,200,000. (Based on the approximate value just hours ago from Coindesk.com)  This is truly an unfortunate event that has caused the international community to shake its trust in Bitcoin as evidenced by the massive price drop.  This is par for the course, when a pillar in the community falls in such a funeral pyre.  The best parallel would be the Bear Stearns’ failure during the 2008 global financial crisis.  Hopefully, Bitcoin won’t follow in the financial system’s footsteps post-Bear Stearns.
+
+This Not The First Time
+
+
+Mt. Gox was suspected to be hacked before to the tune of 400,000 Bitcoins (Today worth $220,000,000) in 2011.  At the time of the incident the bitcoins were only worth $9 million, Hackers attempted to sell $9 million worth of bitcoins simultaneous on the Mt. Gox network and it caused the market price crashing to zero, before Mark Karpeles, CEO of Mt. Gox, shutdown the exchange.  Mt. Gox was able to recover from this by publicly apologizing and by reimbursing the lost funds.  This was an amount that the company was able to reimburse, but the most recent breach eclipses the 2011 incident and the company is unable to make the same promise again.
+
+The Forbes E-book On Bitcoin Secret Money: Living on Bitcoin in the Real World, by Forbes staff writer Kashmir Hill, can be bought in Bitcoin or legal tender.
+Mt. Gox is not the only company to face these problems.  Companies such as MyBitcion lost 154,406 Bitcoins (Today worth $84,923,300) in an attack in 2011 and Bitcoinica lost 43,554 (Today worth $23,954,700) in an attack in 2012.  There are a multitude of these incidents, so it is unfair to lay the blame solely on Mt.Gox.  Financial institutions are targets that constantly under attack by unscrupulous individuals.  It is a difficult position for any person or company to withstand.
+
+Bitcoin Price Drop
+Focusing On Next Steps
+
+Insurance
+
+
+Over one million people were Mt. Gox customers and they need to know what their immediate options are to deal with their financial losses.  First, it’s important to understand that Mt. Gox is not a bank and it does not protect its users with a system similar to the FDIC or Federal Deposit Insurance Corporation.  This means that there isn’t a neutral third-party protecting the money you held at Mt. Gox.  The FDIC provides insurance up to $250,000  on deposits in bank accounts to help assure us that our money won’t evaporate, if the bank shuts down like Mt. Gox.
+
+Mt. Gox. could have provided the same service by purchasing a separate insurance policy on their BTC deposits.  The insurance would’ve been on behalf of the one million users that have lost $409.2 million overnight.  Unfortunately, Mt. Gox does not provide insurance or any assurances for a user’s account.  Thus, we’re left in the wind – cold and unprotected.
+
+Lawsuit
+
+Can we sue or file a claim against Mt. Gox?  Suing Mt. Gox would require an international lawsuit filed under Japanese law, where the company is headquartered and registered by the Tokyo Chamber of Commerce.  Realistically, it won’t be worth our time or money to go after the company.  It’s unlikely that there will be enough assets held within the company to pay off any substantial or meaningful portion of the lost bitcoins.  The legal fees would probably balloon into the millions and swallow what’s left of the fallen company.
+
+What about the officers like Mark Karpeles, CEO?  It would really depend on how Japanese laws would handle the situation.  In the United States, we wouldn’t be able to pierce the corporate veil unless we were able to show gross negligence or some sign of personal fault.  Assuming we were able to obtain a judgment against officers like Mark Karpeles, it is still unlikely that we’d be able to reclaim any amount even close to the $409.2 million.
+
+What Now? Taking Your Losses And Tax Benefits
+
+
+The single silver lining here is that Americans that fell in this disaster will at least be able to use their losses to help lower their tax burdens.  United States tax law allows capital gain losses to be rolled forward without a statute of limitation.  Thus, your Bitcoin losses will be deductible forever until you’ve used them all.  This means that the $409.2 million is worth a potential $122.8 million in tax refunds.
+
+We’ve already discussed in previous articles that bitcoins are classified as assets used as an investment by most of the Bitcoin community.  Thus, taking your capital gain losses is just part of that process.  You’re permitted to take up to $3,000 in capital losses per year to deduct against your personal income “above the line,” until you’ve exhausted all of your capital losses.  (This is a very good thing!)  I can’t say that this will give much solace to people that lost their accounts at Mt. Gox or the bitcoin community, but I hope that this gives them some measure of good news.
+
+Conclusion
+
+Mt. Gox’s failure is not the end of Bitcoin.  It is a single company failing in a large ecosystem.  The other major pillars in the community such as Coinbase, Kraken, Bitstamp, BTC China, Blockchain.info and Circle have issued public statements reiterating my thoughts.  Bitcoin has taken a stumble, but it is up to the community to determine whether this is a scrape they can recover from.  But, it’s important to realize that all wounds heal given enough time.

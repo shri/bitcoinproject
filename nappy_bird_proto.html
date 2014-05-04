@@ -1,0 +1,150 @@
+<html>
+	<head>
+	    <script type="text/javascript" src="jquery/js/jquery-1.9.0.min.js"></script>
+	    <script type="text/javascript" src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+        <link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+
+		<link rel='stylesheet' type='text/css' href='nappy_bird_proto.css'>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    	<script type="text/javascript" src="chart_code.js"></script>
+    	<script type="text/javascript" src="buttons_functions.js"></script>
+
+
+    	<script src="article_1_text.js"></script>
+
+    	<script>
+
+		var graph;
+		var articles_list;
+		var graph_pos;
+		var articles_list_pos;
+		var scroll_active;
+
+		var syncScrolls = function() {
+			if (scroll_active) {
+				if (graph.scrollLeft() != graph_pos) {
+					graph_pos = graph.scrollLeft();
+					articles_list.scrollTop(articles_list.height()*(1-(1.0*graph_pos)/graph.width()));
+					articles_list_pos = articles_list.scrollTop();
+				} else if (articles_list.scrollTop() != articles_list_pos) {
+					articles_list_pos = articles_list.scrollTop();
+					graph.scrollLeft(graph.width()*(1-(1.0*articles_list_pos)/articles_list.height()));
+					graph_pos = graph.scrollLeft();
+				}
+			}
+		}
+
+    	$(document).ready(function() {
+    		// drawChart();
+    		scroll_active = true;
+    		graph = $('#chart').parent();
+    		articles_list = $('#articles_list').parent();
+
+    		graph.scrollLeft(graph.width());
+    		graph_pos = graph.scrollLeft();
+
+    		articles_list_pos = 0;
+
+    		setInterval(syncScrolls, 50);
+
+    		$("#article_div").hide();
+
+    		$("#chart_radio").buttonset();
+
+    		$("#buy_sell_value").keyup(convert);
+    	});
+
+    	</script>
+
+
+	</head>
+	<body>
+		<div id='main_div'>
+
+			<div id='left_div' align='left'>
+
+				<div id='buy_sell_snapshot_div'>
+					<div id='current_market_div'>
+						<div id='current_market_tag'>Current market value</div>
+						<div id='current_market_value'>$635</div>
+						<div id='btc_tag'>/BTC</div>
+					</div>
+
+					<div id='buy_sell_buttons'>
+						<button id='buy_button' onclick="buy_function()">BUY</button>
+						<button id='sell_button' onclick="sell_function()">SELL</button>
+					</div>
+				</div>
+
+				<div id='article_list_div'>
+					<table id='articles_list'>
+						<tr onclick="open_article(0)"><td class='article_name'>Greece puts all in BTC</td> <td class='article_sentiment'>30 min <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
+						<tr onclick="open_article(1)"><td class='article_name'>China bans bitcoin trading</td> <td class='article_sentiment'>2 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(2)"><td class='article_name'>TSA searches for bitcoins</td> <td class='article_sentiment'>3 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(3)"><td class='article_name'>MTGox shuts down</td> <td class='article_sentiment'>5 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article_1(4)"><td class='article_name'>Buy.com accepts bitcoin</td> <td class='article_sentiment'>6 hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
+
+						<tr onclick="open_article(0)"><td class='article_name'>Greece puts all in BTC</td> <td class='article_sentiment'>9 hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
+						<tr onclick="open_article(1)"><td class='article_name'>China bans bitcoin trading</td> <td class='article_sentiment'>10 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(2)"><td class='article_name'>TSA searches for bitcoins</td> <td class='article_sentiment'>11 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(3)"><td class='article_name'>MTGox shuts down</td> <td class='article_sentiment'>13 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(4)"><td class='article_name'>Buy.com accepts bitcoin</td> <td class='article_sentiment'>15 hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
+
+						<tr onclick="open_article(0)"><td class='article_name'>Greece puts all in BTC</td> <td class='article_sentiment'>17 hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
+						<tr onclick="open_article(1)"><td class='article_name'>China bans bitcoin trading</td> <td class='article_sentiment'>18 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(2)"><td class='article_name'>TSA searches for bitcoins</td> <td class='article_sentiment'>21 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(3)"><td class='article_name'>MTGox shuts down</td> <td class='article_sentiment'>23 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+					</table>
+				</div>
+
+			</div>
+
+			<div id='content_div'>
+				 <div id="chart_div">
+				 	<div id="chart_radio">
+						<input id="day_radio" type="radio" name="radio" checked="checked"><label for="day_radio">Day</label>
+						<input id="month_radio" type="radio" name="radio"><label for="month_radio">Month</label>
+						<input id="year_radio" type="radio" name="radio"><label for="year_radio">Year</label>
+					</div>
+
+					 <div id='axis_labels'>
+					 	<div class='axis_label'>800</div>
+				 		<div class='axis_label'>750</div>
+				 		<div class='axis_label'>700</div>
+				 		<div class='axis_label'>650</div>
+				 		<div class='axis_label'>600</div>
+				 	</div>
+				 	<div id='inner_chart_div'>
+					 	<div id='chart'></div>
+					 </div>
+				 </div>
+				 <div id="article_div">
+				 	<button id="x_button" onclick="show_chart()">&#10006</button>
+				 	<div id="article_title">
+				 	</div>
+				 	<br>
+				 	<div id="article_body">
+				 	</div>
+				 </div>
+			</div>
+
+		</div>
+
+		<div id="dialog">
+			<form>
+				
+				<div id="radio">
+					<p>Enter number of</p>
+					<input type="radio" id="BTC_radio" name="radio" class="radio_buttons"><label for="BTC_radio">BTC</label>
+					<input type="radio" id="dollar_radio" name="radio" checked="checked" class="radio_buttons"><label for="dollar_radio">$</label>
+				</div>
+				<br>
+    			<input type="text" id="buy_sell_value" value="0.0" class="text ui-widget-content ui-corner-all" />
+    			<label id="converted_amount"></label>
+    			<br><br>
+    			<button onclick="buy_click()" id="okay_button" class="dialog_buttons"> Buy</button>
+    			<button onclick="buy_click()" class="dialog_buttons"> Cancel</button>
+			</form>
+		</div>
+	</body>
+</html>
