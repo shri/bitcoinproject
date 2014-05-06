@@ -19,6 +19,7 @@
 		var graph_pos;
 		var articles_list_pos;
 		var scroll_active;
+		articles = [];
 
 		var syncScrolls = function() {
 			if (scroll_active) {
@@ -33,6 +34,28 @@
 				}
 			}
 		}
+
+
+		function kimonoCallback(data) {
+			var collection = data.results.collection1;
+			var i = 0;
+			for(key in collection){
+				if(collection[key]["article"]["href"] && collection[key]["time"] && collection[key]["article"]["href"].indexOf("reddit")==-1 && collection[key]["time"].indexOf("hour")!=-1){
+					var time = collection[key]["time"].split("h")[0];
+					time = parseInt(time.substr(0, time.length-1));
+					articles[i] = {"title": collection[key]["article"]["text"], "time": time, "link": collection[key]["article"]["href"]};
+					i++;
+				}
+			}
+			articles.sort(function(a,b){return a.time - b.time;})
+			for(key in articles){
+				articles[key];
+				$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
+			}
+			console.log(articles);
+		}
+
+		
 
     	$(document).ready(function() {
     		// drawChart();
@@ -52,6 +75,12 @@
     		$("#chart_radio").buttonset();
 
     		$("#buy_sell_value").keyup(convert);
+
+    		$.ajax({
+			    "url":"http://www.kimonolabs.com/api/d897y3q0?apikey=989877be85a3ca05477428c8b41d4fbe&callback=kimonoCallback",
+			    "crossDomain":true,
+			    "dataType":"jsonp"
+			});
     	});
 
     	</script>
@@ -78,7 +107,7 @@
 
 				<div id='article_list_div'>
 					<table id='articles_list'>
-						<tr onclick="open_article(0)"><td class='article_name'>Greece puts all in BTC</td> <td class='article_sentiment'>30 min <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
+						<!-- <tr onclick="open_article(0)"><td class='article_name'>Greece puts all in BTC</td> <td class='article_sentiment'>30 min <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
 						<tr onclick="open_article(1)"><td class='article_name'>China bans bitcoin trading</td> <td class='article_sentiment'>2 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
 						<tr onclick="open_article(2)"><td class='article_name'>TSA searches for bitcoins</td> <td class='article_sentiment'>3 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
 						<tr onclick="open_article(3)"><td class='article_name'>MTGox shuts down</td> <td class='article_sentiment'>5 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
@@ -93,7 +122,7 @@
 						<tr onclick="open_article(0)"><td class='article_name'>Greece puts all in BTC</td> <td class='article_sentiment'>17 hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>
 						<tr onclick="open_article(1)"><td class='article_name'>China bans bitcoin trading</td> <td class='article_sentiment'>18 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
 						<tr onclick="open_article(2)"><td class='article_name'>TSA searches for bitcoins</td> <td class='article_sentiment'>21 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
-						<tr onclick="open_article(3)"><td class='article_name'>MTGox shuts down</td> <td class='article_sentiment'>23 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr>
+						<tr onclick="open_article(3)"><td class='article_name'>MTGox shuts down</td> <td class='article_sentiment'>23 hours <br><img class='sentiment_dot' src='red_dot.png'></td></tr> -->
 					</table>
 				</div>
 

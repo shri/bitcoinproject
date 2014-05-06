@@ -65,7 +65,7 @@ function open_article(i){
 	$("#chart_div").hide();
 	$("#article_div").show();
 	$("#article_title").html(article_title);
-	$("#article_body").html(article_1_text);
+	$("#article_body").html('<iframe width="100%" height="100%" src="'+articles[i]["link"]+'"></iframe>');
 
 }
 
