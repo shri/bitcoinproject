@@ -39,14 +39,8 @@
 		function kimonoCallback2(data) {
 		    console.log("kimonoCallback2 ran")
 		    collection2 = data.results.collection1[0].property1;
-<<<<<<< HEAD
-		    currentPrice = "$"+parseFloat(collection2[collection2.length-1]["v"]);
-			document.getElementById('current_market_value').innerHTML = currentPrice;
-=======
 		    btcprice = parseInt(collection2[collection2.length-1]["v"]);
 		    $("#current_market_value").append(btcprice);
-
->>>>>>> a433d52d2c1ba7d0207a7bc4ad7dd5597a206ec9
 		}
 
 		function kimonoCallback(data) {
