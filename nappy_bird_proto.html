@@ -19,6 +19,7 @@
 		var graph_pos;
 		var articles_list_pos;
 		var scroll_active;
+		btcprice = 635;
 		articles = [];
 
 		var syncScrolls = function() {
@@ -38,6 +39,9 @@
 		function kimonoCallback2(data) {
 		    console.log("kimonoCallback2 ran")
 		    collection2 = data.results.collection1[0].property1;
+		    btcprice = parseInt(collection2[collection2.length-1]["v"]);
+		    $("#current_market_value").append(btcprice);
+
 		}
 
 		function kimonoCallback(data) {
@@ -54,7 +58,7 @@
 			articles.sort(function(a,b){return a.time - b.time;})
 			for(key in articles){
 				articles[key];
-				$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
+				$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours</td></tr>");
 			}
 			console.log(articles);
 		}
@@ -104,7 +108,7 @@
 				<div id='buy_sell_snapshot_div'>
 					<div id='current_market_div'>
 						<div id='current_market_tag'>Current market value</div>
-						<div id='current_market_value'>$635</div>
+						<div id='current_market_value'>$</div>
 						<div id='btc_tag'>/BTC</div>
 					</div>
 
