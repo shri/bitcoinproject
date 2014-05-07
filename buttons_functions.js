@@ -50,10 +50,10 @@ function buy_click(){
 function convert(){
 	var current_val = $("#buy_sell_value").val();
 	if ($("#BTC_radio").is(":checked")){
-		var convert = "$ "+current_val*635 ;
+		var convert = "$ "+current_val*btcprice ;
 	}
 	else{
-		var convert = Math.round(current_val*1000/635)/1000 + " BTC";
+		var convert = Math.round(current_val*1000/btcprice)/1000 + " BTC";
 	}
 	$("#converted_amount").text(convert);
 
