@@ -41,7 +41,7 @@
 		}
 
 		function kimonoCallback(data) {
-			var collection = data.results.collection1;
+			collection = data.results.collection1;
 			var i = 0;
 			for(key in collection){
 				if(collection[key]["article"]["href"] && collection[key]["time"] && collection[key]["article"]["href"].indexOf("reddit")==-1 && collection[key]["time"].indexOf("hour")!=-1){

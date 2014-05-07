@@ -1,17 +1,17 @@
 function gethour(string){
-  hour=string.split("T")[1].split(":")[0];
+  var hour=string.split("T")[1].split(":")[0];
   return parseInt(hour);
 }
 function getminute(string){
-  minute=string.split("T")[1].split(":")[1];
+  var minute=string.split("T")[1].split(":")[1];
   return parseInt(minute);
 }
 function getmonth(string){
-  month=string.split("T")[0].split("-")[1];
+  var month=string.split("T")[0].split("-")[1];
   return parseInt(month);
 }
 function getdate(string){
-  date=string.split("T")[0].split("-")[2];
+  var date=string.split("T")[0].split("-")[2];
   return parseInt(date);
 }
 current = new Date();
@@ -19,26 +19,37 @@ currentHour= current.getUTCHours();
 currentDate= current.getUTCDate();
 currentMinute = current.getUTCMinutes();
 currentMonth= current.getUTCMonth();
+CurrentinMinutes = currentDate*24*60+currentHour*60+currentMinute;
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawGoogChart);
 function drawGoogChart() {
-  var data = google.visualization.arrayToDataTable([
-    ['Time', 'BTC value'],
-    [3,  722],
-    [4, 750],
-    [4.5, 705],
-    [5, 660],
-    [6,  695],
-    [7, 720],
-    [8, 740],
-    [9,  737],
-    [10,  700],
-    [11,  670],
-    [12,  681],
-    [15,  648],
-    [17,  620],
-    [19,  635]
-  ]);
+
+  chartlist = [['Time', 'BTC value']];
+  for (key in articles){
+    currentTime=22;
+    var time = articles[key].time;
+    var bestkey;
+    var SearchedinMinutes = CurrentinMinutes - time*60;
+    var leastDiff = 100000000000;
+    for (key2 in collection2){
+      var c2date = getdate(collection2[key2]["d"]);
+      var c2hour = gethour(collection2[key2]["d"]);
+      var c2minute = getminute(collection2[key2]["d"]);
+      var c2minutes = c2date*24*60+c2hour*60+c2minute;
+
+
+      if (Math.abs(c2minutes-SearchedinMinutes)<leastDiff){
+        leastDiff =Math.abs(c2minutes-SearchedinMinutes);
+        console.log("diff is" + Math.abs(c2minutes-SearchedinMinutes)+" best key is " + bestkey);
+        bestkey=key2;
+      }
+    }
+    chartlist.push([parseInt(currentTime-time), parseFloat(collection2[bestkey]["v"])]);
+    leastdiff = 100000000000;
+  }
+  var data = google.visualization.arrayToDataTable(
+    chartlist
+  );
 
 
     console.log(collection2);
