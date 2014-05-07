@@ -27,7 +27,7 @@ function drawGoogChart() {
 
   chartlist = [['Time', 'BTC value']];
   for (key in articles){
-    currentTime=22;
+    currentTime=24;
     var time = articles[key].time;
     var bestkey;
     var SearchedinMinutes = CurrentinMinutes - time*60;
@@ -41,7 +41,7 @@ function drawGoogChart() {
 
       if (Math.abs(c2minutes-SearchedinMinutes)<leastDiff){
         leastDiff =Math.abs(c2minutes-SearchedinMinutes);
-        console.log("diff is" + Math.abs(c2minutes-SearchedinMinutes)+" best key is " + bestkey);
+        //console.log("diff is" + Math.abs(c2minutes-SearchedinMinutes)+" best key is " + bestkey);
         bestkey=key2;
       }
     }
@@ -53,7 +53,7 @@ function drawGoogChart() {
   );
 
 
-    console.log(collection2);
+    //console.log(collection2);
 
   var options = {
     hAxis: {textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:3, f:"3 am"}, {v:6, f:"6 am"}, {v:9, f:"9 am"}, {v:12, f:"12 pm"}, {v:15, f:"3 pm"}, {v:18, f:"6 pm"}]},

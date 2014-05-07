@@ -36,7 +36,7 @@
 		}
 
 		function kimonoCallback2(data) {
-		    console.log("kimonoCallback2 ran")
+		    //console.log("kimonoCallback2 ran")
 		    collection2 = data.results.collection1[0].property1;
 		    currentPrice = "$"+parseFloat(collection2[collection2.length-1]["v"]);
 			document.getElementById('current_market_value').innerHTML = currentPrice;
@@ -49,6 +49,11 @@
 				if(collection[key]["article"]["href"] && collection[key]["time"] && collection[key]["article"]["href"].indexOf("reddit")==-1 && collection[key]["time"].indexOf("hour")!=-1){
 					var time = collection[key]["time"].split("h")[0];
 					time = parseInt(time.substr(0, time.length-1));
+					console.log(time);
+					if(isNaN(time)){
+						time=1;
+						console.log(time);
+					}
 					articles[i] = {"title": collection[key]["article"]["text"], "time": time, "link": collection[key]["article"]["href"]};
 					i++;
 				}
@@ -58,7 +63,7 @@
 				articles[key];
 				$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
 			}
-			console.log(articles);
+			//console.log(articles);
 		}
 
 		
@@ -142,9 +147,6 @@
 			<div id='content_div'>
 				 <div id="chart_div">
 				 	<div id="chart_radio">
-						<input id="day_radio" type="radio" name="radio" checked="checked"><label for="day_radio">Day</label>
-						<input id="month_radio" type="radio" name="radio"><label for="month_radio">Month</label>
-						<input id="year_radio" type="radio" name="radio"><label for="year_radio">Year</label>
 					</div>
 
 					 <div id='axis_labels'>
