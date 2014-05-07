@@ -105,7 +105,20 @@
 			    "crossDomain":true,
 			    "dataType":"jsonp"
 			});
-    	});
+
+			$(document).keyup(function(e) {
+
+				  if (e.keyCode == 27) { 
+				  	show_chart();
+				  }   // esc
+				  if (e.keyCode == 66) { 
+				  	buy_function();
+				  } 
+				  if (e.keyCode == 83) { 
+				  	sell_function();
+				  } 
+				});
+			});
 
     	</script>
 

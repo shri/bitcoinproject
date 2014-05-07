@@ -104,7 +104,7 @@ function open_article(i){
 		$($('#articles_list tr')[i]).css("background-color", "#787878").css("color", "#E8E8E8");
 
 	}
-	$("#article_body").html('<iframe width="100%" height="100%" src="'+articles[i]["link"]+'"></iframe>');
+	$("#article_body").html('<iframe width="100%" height="85%" src="'+articles[i]["link"]+'"></iframe>');
 
 }
 
