@@ -45,7 +45,7 @@ function drawGoogChart() {
         bestkey=key2;
       }
     }
-    chartlist.push([parseInt(currentTime-time), parseFloat(collection2[bestkey]["v"])]);
+    chartlist.push([parseInt(currentTime-time)+currentMinute/60, parseFloat(collection2[bestkey]["v"])]);
     leastdiff = 100000000000;
   }
   var data = google.visualization.arrayToDataTable(
@@ -56,12 +56,14 @@ function drawGoogChart() {
     //console.log(collection2);
 
   var options = {
-    hAxis: {textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:3, f:"3 am"}, {v:6, f:"6 am"}, {v:9, f:"9 am"}, {v:12, f:"12 pm"}, {v:15, f:"3 pm"}, {v:18, f:"6 pm"}]},
-    vAxis: {minValue: 600, textPosition: 'none'},
+    hAxis: {textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:3, f:"3 am"}, {v:6, f:"6 am"}, {v:9, f:"9 am"}, {v:12, f:"12 pm"}, {v:15, f:"3 pm"}, {v:18, f:"6 pm"}, {v:21, f:"9 pm"}]},
+    vAxis: {textPosition: 'out', textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:420, f:"$420"}, {v:424, f:"$424"}, {v:428, f:"$428"}, {v:432, f:"$432"}, {v:436, f:"$436"}]},
     explorer: { axis: 'horizontal', actions: []},
     legend: {position: 'none'},
     chartArea: {width: '100%', height: '90%'},
-    colors: ['#33CCCC']
+    colors: ['#33CCCC'],
+    dataOpacity: 1.0,
+    pointSize: 8
   };
 
   var chart = new google.visualization.LineChart(document.getElementById('chart'));
@@ -72,12 +74,12 @@ function drawGoogChart() {
 }
 
 function onMouseOverHandler(e) {
-  row = $($('#articles_list tr')[13-e.row]);
+  row = $($('#articles_list tr')[e.row]);
   row.css({'background-color':'#787878', 'color':'#E8E8E8'});
 
 }
 
 function onMouseOutHandler(e) {
-  row = $($('#articles_list tr')[13-e.row]);
+  row = $($('#articles_list tr')[e.row]);
   row.css({'background-color':'#404040', 'color':'#C0C0C0'});
 }

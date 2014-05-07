@@ -14,7 +14,7 @@ function buy_function(){
         	$('.ui-widget-overlay').removeClass('custom-overlay');
         	},
         dialogClass:'dialog_style',
-        width: 400
+        width: 400,
     });
 }
 
@@ -35,16 +35,21 @@ function sell_function(){
         	},
         dialogClass:'dialog_style',
         width: 400
+
     });
 }
 
 
 $(function() {
     $( "#radio" ).buttonset();
+    $("#radio").change(convert);
 });
 
 function buy_click(){
-	$("#dialog").dialog("close");
+	$("#dialog").hide();
+}
+function close_dialog(){
+	$("#dialog").hide();
 }
 
 function convert(){
@@ -58,13 +63,23 @@ function convert(){
 	$("#converted_amount").text(convert);
 
 }
-
+current_article=null;
 function open_article(i){
 	var article_title = $($('#articles_list td.article_name')[i]).text();
 	scroll_active = false;
 	$("#chart_div").hide();
 	$("#article_div").show();
 	$("#article_title").html(article_title);
+	if (current_article==null){
+		current_article=i;
+		$($('#articles_list tr')[i]).css("background-color", "#787878").css("color", "#E8E8E8");
+	}
+	else{
+		$($('#articles_list tr')[current_article]).css("background-color", "#404040").css("color", "#C0C0C0");
+		current_article=i;
+		$($('#articles_list tr')[i]).css("background-color", "#787878").css("color", "#E8E8E8");
+
+	}
 	$("#article_body").html('<iframe width="100%" height="100%" src="'+articles[i]["link"]+'"></iframe>');
 
 }
@@ -73,4 +88,6 @@ function show_chart(){
 	scroll_active = true;
 	$("#chart_div").show();
 	$("#article_div").hide();
+	$($('#articles_list tr')[current_article]).css("background-color", "#404040").css("color", "#C0C0C0");
+	current_article=null;
 }

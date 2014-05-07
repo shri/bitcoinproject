@@ -62,10 +62,10 @@
 			for(key in articles){
 				articles[key];
 				if (articles[key]["time"]!=1){
-					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
+					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br></td></tr>");
 				}
 				else{
-					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hour <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
+					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hour <br></td></tr>");
 				}
 				
 			}
@@ -156,11 +156,11 @@
 					</div>
 
 					 <div id='axis_labels'>
-					 	<div class='axis_label'>800</div>
-				 		<div class='axis_label'>750</div>
-				 		<div class='axis_label'>700</div>
-				 		<div class='axis_label'>650</div>
-				 		<div class='axis_label'>600</div>
+					 	<div class='axis_label'>436</div>
+				 		<div class='axis_label'>432</div>
+				 		<div class='axis_label'>428</div>
+				 		<div class='axis_label'>424</div>
+				 		<div class='axis_label'>420</div>
 				 	</div>
 				 	<div id='inner_chart_div'>
 					 	<div id='chart'></div>
@@ -179,19 +179,19 @@
 		</div>
 
 		<div id="dialog">
+
 			<form>
-				
+				<button onclick="close_dialog()" id="x_button2" >&#10006</button>
 				<div id="radio">
-					<p>Enter number of</p>
+					Enter number of
 					<input type="radio" id="BTC_radio" name="radio" class="radio_buttons"><label for="BTC_radio">BTC</label>
 					<input type="radio" id="dollar_radio" name="radio" checked="checked" class="radio_buttons"><label for="dollar_radio">$</label>
 				</div>
 				<br>
-    			<input type="text" id="buy_sell_value" value="0.0" class="text ui-widget-content ui-corner-all" />
+    			<input type="text" id="buy_sell_value" value="0.00" class="text ui-widget-content ui-corner-all" />
     			<label id="converted_amount"></label>
     			<br><br>
     			<button onclick="buy_click()" id="okay_button" class="dialog_buttons"> Buy</button>
-    			<button onclick="buy_click()" class="dialog_buttons"> Cancel</button>
 			</form>
 		</div>
 	</body>
