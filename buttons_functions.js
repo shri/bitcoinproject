@@ -12,7 +12,6 @@ function buy_function(){
 	 		},
         close: function() {
         	$('.ui-widget-overlay').removeClass('custom-overlay');
-        	$(".ui-dialog-content").dialog('close');
         	},
         dialogClass:'dialog_style',
         width: 400,
@@ -33,7 +32,6 @@ function sell_function(){
 	 		},
         close: function() {
         	$('.ui-widget-overlay').removeClass('custom-overlay');
-        	$(".ui-dialog-content").dialog('close');
         	},
         dialogClass:'dialog_style',
         width: 400
@@ -48,7 +46,12 @@ $(function() {
 });
 
 function buy_click(){
-	if (confirm("Are you sure you want to make this transaction?")){
+	var current_val = $("#buy_sell_value").val();
+	if (isNaN(parseFloat(current_val))){
+		alert("Please enter a numerical value");
+	}
+	else{
+	if (confirm("Are you sure you want to make this transaction? Notes: 1) Transaction does not guarantee price listed on screen. 2) If NaN is listed as your converted cost, transaction will not go through.")){
 	$("#dialog").hide();
 	if (current_article==null){}
 	else{
@@ -58,6 +61,7 @@ function buy_click(){
 	$("#article_div").show();
 	$("#article_title").html(article_title);
 	}
+}
 }
 }
 function close_dialog(){
@@ -75,10 +79,10 @@ function close_dialog(){
 function convert(){
 	var current_val = $("#buy_sell_value").val();
 	if ($("#BTC_radio").is(":checked")){
-		var convert = "$ "+current_val*btcprice ;
+		var convert = "BTC = $"+current_val*btcprice ;
 	}
 	else{
-		var convert = Math.round(current_val*1000/btcprice)/1000 + " BTC";
+		var convert = "Dollars = " + Math.round(current_val*1000/btcprice)/1000 + " BTC";
 	}
 	$("#converted_amount").text(convert);
 
