@@ -20,6 +20,7 @@
 		var articles_list_pos;
 		var scroll_active;
 		articles = [];
+		btcprice = 437;
 
 		var syncScrolls = function() {
 			if (scroll_active) {
@@ -40,6 +41,7 @@
 		    collection2 = data.results.collection1[0].property1;
 		    currentPrice = "$"+parseFloat(collection2[collection2.length-1]["v"]);
 			document.getElementById('current_market_value').innerHTML = currentPrice;
+			btcprice = parseFloat(collection2[collection2.length-1]["v"]);
 		}
 
 		function kimonoCallback(data) {
@@ -62,10 +64,10 @@
 			for(key in articles){
 				articles[key];
 				if (articles[key]["time"]!=1){
-					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br></td></tr>");
+					$("#articles_list").append("<tr onclick='open_article("+key+")' class='"+articles[key]["time"]+"hour'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br></td></tr>");
 				}
 				else{
-					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hour <br></td></tr>");
+					$("#articles_list").append("<tr onclick='open_article("+key+")' class='"+articles[key]["time"]+"hour'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hour <br></td></tr>");
 				}
 				
 			}

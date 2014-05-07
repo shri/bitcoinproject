@@ -82,6 +82,7 @@ body{
 	color:white;
 	border-radius: 1px;
 	border:4px;
+	cursor: hand;
 }
 
 #sell_button{
@@ -93,6 +94,7 @@ body{
 	margin-top: 8px;
 	border-radius: 1px;
 	border: 4px;
+	cursor: hand;
 }
 
 #article_list_div {
@@ -118,8 +120,8 @@ body{
 }
 
 #articles_list tr:hover {
-	background-color: #787878;
-	color: #E8E8E8;
+	background-color: #787878 !important;
+	color: #E8E8E8 !important;
 
 }
 
