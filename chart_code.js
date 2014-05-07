@@ -14,6 +14,7 @@ function getdate(string){
   var date=string.split("T")[0].split("-")[2];
   return parseInt(date);
 }
+
 current = new Date();
 currentHour= current.getUTCHours();
 currentDate= current.getUTCDate();

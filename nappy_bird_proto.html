@@ -38,6 +38,8 @@
 		function kimonoCallback2(data) {
 		    console.log("kimonoCallback2 ran")
 		    collection2 = data.results.collection1[0].property1;
+		    currentPrice = "$"+parseFloat(collection2[collection2.length-1]["v"]);
+			document.getElementById('current_market_value').innerHTML = currentPrice;
 		}
 
 		function kimonoCallback(data) {
@@ -104,7 +106,7 @@
 				<div id='buy_sell_snapshot_div'>
 					<div id='current_market_div'>
 						<div id='current_market_tag'>Current market value</div>
-						<div id='current_market_value'>$635</div>
+						<div id='current_market_value'></div>
 						<div id='btc_tag'>/BTC</div>
 					</div>
 
