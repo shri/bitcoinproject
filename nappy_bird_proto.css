@@ -166,7 +166,7 @@ td.article_sentiment {
 	margin-left: 12%;
 	text-align: center;
 	overflow-y: hidden !important;
-	overflow-x:scroll;
+	overflow-x: hidden;
 
 }
 
@@ -238,7 +238,7 @@ td.article_sentiment {
 }
 
 #article_body{
-	overflow:scroll;
+	overflow:hidden;
 	height:90%;
 	width:100%;
 	margin-top: 1%;
