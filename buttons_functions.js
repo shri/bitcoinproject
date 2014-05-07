@@ -46,10 +46,28 @@ $(function() {
 });
 
 function buy_click(){
+	if (confirm("Are you sure you want to make this transaction?")){
 	$("#dialog").hide();
+	if (current_article==null){}
+	else{
+	var article_title = $($('#articles_list td.article_name')[current_article]).text();
+	scroll_active = false;
+	$("#chart_div").hide();
+	$("#article_div").show();
+	$("#article_title").html(article_title);
+	}
+}
 }
 function close_dialog(){
 	$("#dialog").hide();
+	if (current_article==null){}
+	else{
+	var article_title = $($('#articles_list td.article_name')[current_article]).text();
+	scroll_active = false;
+	$("#chart_div").hide();
+	$("#article_div").show();
+	$("#article_title").html(article_title);
+	}
 }
 
 function convert(){

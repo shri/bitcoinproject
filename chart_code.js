@@ -57,7 +57,7 @@ function drawGoogChart() {
 
   var options = {
     hAxis: {textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:3, f:"3 am"}, {v:6, f:"6 am"}, {v:9, f:"9 am"}, {v:12, f:"12 pm"}, {v:15, f:"3 pm"}, {v:18, f:"6 pm"}, {v:21, f:"9 pm"}]},
-    vAxis: {textPosition: 'out', textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:420, f:"$420"}, {v:424, f:"$424"}, {v:428, f:"$428"}, {v:432, f:"$432"}, {v:436, f:"$436"}]},
+    vAxis: {textPosition: 'out', textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:428, f:"$428"}, {v:432, f:"$432"}, {v:436, f:"$436"}, {v:440, f:"$440"}, {v:444, f:"$444"}]},
     explorer: { axis: 'horizontal', actions: []},
     legend: {position: 'none'},
     chartArea: {width: '100%', height: '90%'},
