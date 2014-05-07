@@ -61,7 +61,13 @@
 			articles.sort(function(a,b){return a.time - b.time;})
 			for(key in articles){
 				articles[key];
-				$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
+				if (articles[key]["time"]!=1){
+					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hours <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
+				}
+				else{
+					$("#articles_list").append("<tr onclick='open_article("+key+")'><td class='article_name'>"+articles[key]["title"]+"</td> <td class='article_sentiment'>"+articles[key]["time"]+" hour <br><img class='sentiment_dot' src='green_dot.png'></td></tr>");
+				}
+				
 			}
 			//console.log(articles);
 		}
