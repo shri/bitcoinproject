@@ -74,12 +74,14 @@ function drawGoogChart() {
 }
 
 function onMouseOverHandler(e) {
-  row = $($('#articles_list tr')[e.row]);
+  row = $($('#articles_list tr')[e.row]).attr("class");
+  row = $("."+row);
   row.css({'background-color':'#787878', 'color':'#E8E8E8'});
 
 }
 
 function onMouseOutHandler(e) {
-  row = $($('#articles_list tr')[e.row]);
+  row = $($('#articles_list tr')[e.row]).attr("class");
+  row = $("."+row);
   row.css({'background-color':'#404040', 'color':'#C0C0C0'});
 }

@@ -12,6 +12,7 @@ function buy_function(){
 	 		},
         close: function() {
         	$('.ui-widget-overlay').removeClass('custom-overlay');
+        	$(".ui-dialog-content").dialog('close');
         	},
         dialogClass:'dialog_style',
         width: 400,
@@ -32,6 +33,7 @@ function sell_function(){
 	 		},
         close: function() {
         	$('.ui-widget-overlay').removeClass('custom-overlay');
+        	$(".ui-dialog-content").dialog('close');
         	},
         dialogClass:'dialog_style',
         width: 400
