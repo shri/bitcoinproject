@@ -1,3 +1,24 @@
+function gethour(string){
+  hour=string.split("T")[1].split(":")[0];
+  return parseInt(hour);
+}
+function getminute(string){
+  minute=string.split("T")[1].split(":")[1];
+  return parseInt(minute);
+}
+function getmonth(string){
+  month=string.split("T")[0].split("-")[1];
+  return parseInt(month);
+}
+function getdate(string){
+  date=string.split("T")[0].split("-")[2];
+  return parseInt(date);
+}
+current = new Date();
+currentHour= current.getUTCHours();
+currentDate= current.getUTCDate();
+currentMinute = current.getUTCMinutes();
+currentMonth= current.getUTCMonth();
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawGoogChart);
 function drawGoogChart() {
@@ -18,6 +39,9 @@ function drawGoogChart() {
     [17,  620],
     [19,  635]
   ]);
+
+
+    console.log(collection2);
 
   var options = {
     hAxis: {textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:3, f:"3 am"}, {v:6, f:"6 am"}, {v:9, f:"9 am"}, {v:12, f:"12 pm"}, {v:15, f:"3 pm"}, {v:18, f:"6 pm"}]},

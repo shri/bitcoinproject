@@ -35,6 +35,10 @@
 			}
 		}
 
+		function kimonoCallback2(data) {
+		    console.log("kimonoCallback2 ran")
+		    collection2 = data.results.collection1[0].property1;
+		}
 
 		function kimonoCallback(data) {
 			var collection = data.results.collection1;
@@ -77,6 +81,11 @@
     		$("#buy_sell_value").keyup(convert);
 
     		$.ajax({
+			    "url":"http://www.kimonolabs.com/api/97vao3a6?apikey=989877be85a3ca05477428c8b41d4fbe&kimseries=1&kimoffset=9200&callback=kimonoCallback2",
+			    "crossDomain":true,
+			    "dataType":"jsonp"
+			});
+			$.ajax({
 			    "url":"http://www.kimonolabs.com/api/d897y3q0?apikey=989877be85a3ca05477428c8b41d4fbe&callback=kimonoCallback",
 			    "crossDomain":true,
 			    "dataType":"jsonp"
