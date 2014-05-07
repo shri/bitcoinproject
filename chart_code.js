@@ -27,7 +27,7 @@ function drawGoogChart() {
 
   chartlist = [['Time', 'BTC value']];
   for (key in articles){
-    currentTime=22;
+    currentTime=12;
     var time = articles[key].time;
     var bestkey;
     var SearchedinMinutes = CurrentinMinutes - time*60;
@@ -56,7 +56,7 @@ function drawGoogChart() {
     //console.log(collection2);
 
   var options = {
-    hAxis: {textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:3, f:"6 pm"}, {v:6, f:"9 pm"}, {v:9, f:"12 am"}, {v:12, f:"3 am"}, {v:15, f:"6 am"}, {v:18, f:"9 am"}, {v:21, f:"12 pm"}]},
+    hAxis: {textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:3, f:"6 am"}, {v:6, f:"9 am"}, {v:9, f:"12 pm"}]},
     vAxis: {textPosition: 'out', textStyle: {color: '#909090', fontName: 'Trebuchet MS'}, gridline: {count:0}, ticks: [{v:428, f:"$428"}, {v:432, f:"$432"}, {v:436, f:"$436"}, {v:440, f:"$440"}, {v:444, f:"$444"}]},
     explorer: { axis: 'horizontal', actions: []},
     legend: {position: 'none'},
